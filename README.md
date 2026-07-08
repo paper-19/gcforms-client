@@ -10,7 +10,7 @@ Requires Node.js 20 or later. ESM-only.
 ## Install
 
 ```sh
-npm install gcforms-client
+npm install @paper19/gcforms-client
 ```
 
 ## Quick start
@@ -19,7 +19,7 @@ Generate an API key for your form in GC Forms under **Settings → API integrati
 
 ```ts
 import { readFile } from "node:fs/promises";
-import { GcFormsClient, gcFormsCredentialsSchema } from "gcforms-client";
+import { GcFormsClient, gcFormsCredentialsSchema } from "@paper19/gcforms-client";
 
 const credentials = gcFormsCredentialsSchema.parse(
   JSON.parse(await readFile("./<formId>_private_api_key.json", "utf8")),
@@ -63,7 +63,7 @@ az keyvault secret set \
 ```ts
 import { DefaultAzureCredential } from "@azure/identity";
 import { SecretClient } from "@azure/keyvault-secrets";
-import { GcFormsClient, gcFormsCredentialsSchema } from "gcforms-client";
+import { GcFormsClient, gcFormsCredentialsSchema } from "@paper19/gcforms-client";
 
 const vault = new SecretClient(
   "https://<vault-name>.vault.azure.net",
@@ -121,7 +121,7 @@ Retries use exponential backoff with full jitter and honour `Retry-After` (cappe
 Everything the package throws (other than zod validation errors on your own inputs) extends `GcFormsApiError`:
 
 ```ts
-import { GcFormsApiError, GcFormsAuthError, GcFormsDecryptionError } from "gcforms-client";
+import { GcFormsApiError, GcFormsAuthError, GcFormsDecryptionError } from "@paper19/gcforms-client";
 
 try {
   await client.getSubmission(name);

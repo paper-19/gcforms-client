@@ -1,6 +1,9 @@
 {
-  "name": "gcforms-client",
+  "name": "@paper19/gcforms-client",
   "version": "1.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "Unofficial TypeScript client for the Government of Canada Forms API (auth, submission decryption, retries)",
   "license": "MIT",
   "type": "module",
