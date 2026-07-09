@@ -6,6 +6,10 @@
   },
   "description": "Unofficial TypeScript client for the Government of Canada Forms API (auth, submission decryption, retries)",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paper-19/gcforms-client.git"
+  },
   "type": "module",
   "engines": {
     "node": ">=20"
